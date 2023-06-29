@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <link rel="stylesheet" href="/spring-boot/src/main/resources/static/admin.css" th:href="@{css/admin.css}" />
+  </head>
+  <body>
+    <div class="slidebar">
+      <header>LOGO</header>
+      <ul>
+        <li>
+          <a href="admin.html"
+            ><ion-icon name="clipboard"></ion-icon>Dashboard</a
+          >
+        </li>
+        <li>
+          <a href="#"><ion-icon name="book"></ion-icon>Books</a>
+        </li>
+        <li>
+          <a href="#"><ion-icon name="people"></ion-icon>Users</a>
+        </li>
+      </ul>
+    </div>
+    <div class="choice">
+      <button class="usercrud">Ajouter Un Utilisateur</button>
+      <button class="usercrud">Modifier Un Utilisateur</button>
+      <button class="usercrud">Supprimer Un Utilisateur</button>
+    </div>
+    <div class="option">
+		<form action="addUser" method="post">
+        <table>
+      <tr>
+        <td><label for="">NOM</label></td>
+        <td><input type="text" name="fname" /></td>
+      </tr>
+      <tr>
+        <td><label for="">Prenom</label></td>
+        <td><input type="text" name="lname" /></td>
+      </tr>
+      <tr>
+        <td><label for="">MOT DE PASSE</label></td>
+        <td><input type="password" name="password"/></td>
+      </tr>
+      <tr>
+        <td><label for="">E-Mail</label></td>
+        <td><input type="email" name="email" id="" /></td>
+      </tr>
+      <tr>
+        <td><label for="">Date De Naissance</label></td>
+        <td><input type="date" name="dob"/></td>
+      </tr>
+      <tr>
+        <td colspan="2" id="submitbtn"><button type="submit">Enregistrer </button></td>
+      </tr>
+      <tr>
+		  <td colspan="2"> <h2 th:text="${valide}"></h2></td>
+	  </tr>
+    </table>
+    </form>
+    </div>
+  </body>
+</html>

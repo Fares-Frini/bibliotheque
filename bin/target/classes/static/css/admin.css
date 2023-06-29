@@ -1,0 +1,174 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.slidebar
+{
+    position: fixed;
+    left: 0px;
+    width: 250px;
+    height: 100%;
+    background: #042331;
+    transition: all 0.4s ease;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: 100;
+}
+.slidebar header
+{
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: #063146;
+    user-select: none;
+}
+.slidebar ul li a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height:  65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid black;
+    transition: 0.4s;
+    background-color: #042331;
+}
+ul li:hover a 
+{
+    padding-left: 50px;
+}
+.slidebar ul li a ion-icon
+{
+    margin-right: 16px;
+
+}
+/*#check
+{
+    display: none;
+}
+label #btn,label #cancel
+{
+    position: absolute;
+    cursor: pointer;
+    z-index: 100;
+    background: #042331;
+}
+label #btn
+{
+    left: 40px;
+    top: 25px;
+    font-size: 35px;
+    color: white;
+    padding: 6px 12px;
+    transition: all 0.5s;
+}
+label #cancel
+{
+    z-index: 1111;
+    left: -195px;
+    top: 17px;
+    font-size: 30px;
+    color:white ;
+    padding: 4px 9px;
+    transition:  0.4s ;
+}
+#check:checked ~.slidebar
+{
+    left: 0;
+}
+#check:checked ~ label #btn 
+{
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+#check:checked ~ label #cancel 
+{
+    left: 195px;
+}
+*/
+.choice
+{
+    background-color: white;
+    position: absolute;
+    top: 0px;
+    left: 20.3%;
+    width: 40%;
+    height: 100%;
+    z-index: 2;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.usercrud
+{
+    display: flex;
+    margin: 15%;
+    padding: 20px;
+    width: 70%;
+    background-color: white;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: 0.4s ease;
+    font-size: large;
+}
+.usercrud:hover
+ {
+    background-color: #042331;
+    color: white    ;
+
+ }
+ .option
+{
+    background-color: #063146;
+    width: 39.7%;
+    left: 60.3%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    
+}
+.option input
+{
+    background-color: white;
+    width: 100%;
+    height: 35px;
+    margin: 10px;
+
+
+}
+.option table
+{
+    margin-top: 20%;
+    width: 80%;
+    color: white    ;
+    margin-left: 50px;
+    font-weight: bold;
+}
+#submitbtn
+{
+    text-align: center;
+}
+#submitbtn button
+{
+    width: 70%;
+    height: 40px;
+    font-weight: bold;
+    background-color: #06d6a0;
+    margin-top: 30px;
+    border-radius: 10px;
+    transition:0.4s;
+    cursor: pointer;
+}
+#submitbtn button:hover
+{
+    background-color: green;
+    color: white;
+}
