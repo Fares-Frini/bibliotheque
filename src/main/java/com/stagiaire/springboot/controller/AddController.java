@@ -1,26 +1,18 @@
 package com.stagiaire.springboot.controller;
-import com.stagiaire.springboot.model.*;
-import com.stagiaire.springboot.service.UserService;
 
+ 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-@Controller
+ import org.springframework.web.bind.annotation.GetMapping;
+ @Controller
 public class AddController {
 	
-	private final UserService userService;
-	
-	public AddController(UserService userService)
-	{
-		this.userService=userService;
-	}
-	@GetMapping("/")
+ 	
+	 
+	@GetMapping("/login")
 	public String loginUser() {
 		return"login";
 	}
-	@GetMapping("/addUser")
+	@GetMapping("/userManagement")
 	public String addUser() {
 		return"adminUser";
 	}
@@ -28,9 +20,13 @@ public class AddController {
 	public String adminDash() {
 		return"admin";
 	}
+	@GetMapping("/bookManagement")
+	public String bookManagement() {
+		return"adminBook.html";
+	}
 	
 	
-	@PostMapping("/addUser")
+	/*@PostMapping("/addUser")
 	public String userAdd(@ModelAttribute User user,Model model)
 	{
 		userService.saveUser(user);
@@ -38,4 +34,5 @@ public class AddController {
 		model.addAttribute("valide","L'utilisateur a été ajouté avec succés ");
 		return("adminUser");
 	}
+	*/
 }
