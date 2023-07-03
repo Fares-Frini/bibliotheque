@@ -1,8 +1,12 @@
 	package com.stagiaire.springboot.model;
 
+import java.security.NoSuchAlgorithmException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import com.stagiaire.springboot.encrypt.Encryptor;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -67,8 +71,9 @@ public class User {
 	public String getPassword() {
 		return password;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+	Encryptor encryptor = new Encryptor();
+	public void setPassword(String password) throws NoSuchAlgorithmException {
+		this.password = String.valueOf(encryptor.encryptString(password));
 	}
 	public Date getDob() {
 		return dob;

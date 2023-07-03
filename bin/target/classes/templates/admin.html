@@ -1,29 +1,66 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <link rel="stylesheet" href="/spring-boot/src/main/resources/static/admin.css" th:href="@{css/admin.css}"/>
+    <title>Books</title>
+    <link rel="stylesheet" href="admin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/spring-boot/src/main/resources/static/admin.css" th:href="@{css/admin.css}" />
   </head>
   <body>
-    <div class="slidebar">
-      <header>LOGO</header>
-      <ul>
-        <li>
-          <a href="admin.html"><ion-icon name="clipboard"></ion-icon>Dashboard</a>
-        </li>
-        <li>
-          <a href="#"><ion-icon name="book"></ion-icon>Books</a>
-        </li>
-        <li>
-          <a href="adminUser.html"><ion-icon name="people"></ion-icon>Users</a>
-        </li>
-      </ul>
+    <div class="container">
+      <nav>
+        <ul>
+          <li>
+            <a class="logo">
+              <span class="nav-item">User</span>
+            </a>
+          </li>
+          <li>
+            <a href="admin" th:href="@{/admin}">
+              <i class="fas fa-home"></i>
+              <span class="nav-item">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="userManagement">
+              <i class="fas fa-user"></i>
+              <span class="nav-item">Users</span>
+            </a>
+          </li>
+          <li>
+            <a href="bookManagement">
+              <i class="fas fa-book"></i>
+              <span class="nav-item">Books</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-cog"></i>
+              <span class="nav-item">Settings</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-question-circle"></i>
+              <span class="nav-item">Help</span>
+            </a>
+          </li>
+          <li>
+            <a href="login" class="logout">
+              <i class="fas fa-sign-out-alt"></i>
+              <span class="nav-item">Log out</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <section class="main">
+        <div class="main-top">
+        </div>
+      </section>
     </div>
   </body>
 </html>
