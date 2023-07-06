@@ -71,8 +71,9 @@ public class User {
 	public String getPassword() {
 		return password;
 	}
-	Encryptor encryptor = new Encryptor();
 	public void setPassword(String password) throws NoSuchAlgorithmException {
+		Encryptor encryptor = new Encryptor();
+
 		this.password = String.valueOf(encryptor.encryptString(password));
 	}
 	public Date getDob() {
