@@ -73,7 +73,6 @@ public class User {
 	}
 	public void setPassword(String password) throws NoSuchAlgorithmException {
 		Encryptor encryptor = new Encryptor();
-
 		this.password = String.valueOf(encryptor.encryptString(password));
 	}
 	public Date getDob() {

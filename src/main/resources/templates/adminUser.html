@@ -15,6 +15,7 @@
     />
   </head>
   <body>
+	  <div id="black" style="display: none;"></div>
     <div class="container">
       <nav>
         <ul>
@@ -64,8 +65,9 @@
       <section class="main">
         <div class="main-top">
           <h1>Users</h1>
+          <button id="openclose" class="addbtn" onclick="ajouter()">Ajouter</button>
         </div>
-        <div class="add">
+        <div class="add hidden" id="open">
 			<form id="post">
 				<input type="text" id="id" style="display: none;" />
           <table >
