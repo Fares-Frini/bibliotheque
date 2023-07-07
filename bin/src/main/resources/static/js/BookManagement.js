@@ -22,12 +22,11 @@ fetch("http://localhost:8080/book/findbook")
     for (let i = 0; i < l; i++) {
       var row = table.insertRow(i + 1);
       var idCell = row.insertCell(0);
-
       var nameCell = row.insertCell(1);
       var authorCell = row.insertCell(2);
       var douCell = row.insertCell(3);
       var categoryCell = row.insertCell(4);
-      var ButtonCell = row.insertCell(7);
+      var ButtonCell = row.insertCell(5);
       var delButton = document.createElement("input");
       var modButton = document.createElement("input");
       delButton.type = "button";
@@ -157,7 +156,7 @@ post.addEventListener("submit", function (e) {
   var name = document.getElementById("name").value;
   var author = document.getElementById("author").value;
   var category = document.getElementById("category").value;
-  var dou = document.getElementById("dou").value;
+  var dou = new Date();
   var id = document.getElementById("id");
   if (id.value === "") {
     e.preventDefault();
@@ -213,7 +212,7 @@ function update(tab) {
   document.getElementById("author").value =
     tab.parentElement.parentElement.children[2].innerHTML;
   document.getElementById("category").value =
-    tab.parentElement.parentElement.children[8].innerHTML;
+    tab.parentElement.parentElement.children[3].innerHTML;
 }
 
 window.alert=function(message,timeout=null){

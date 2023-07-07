@@ -34,6 +34,7 @@ fetch("http://localhost:8080/book/findbook")
       delButton.style =
         "color:white;background-color:#f94144 ;font-weight: bold;margin: 5px;font-size: medium;border-radius: 10px; padding: 5px; ";
       modButton.setAttribute("onclick", "update(this)");
+      modButton.setAttribute("onclick", "ajouter()");
       modButton.type = "button";
       modButton.value = "Modifier";
       modButton.style =
@@ -205,6 +206,7 @@ function del(tab) {
       });
 }
 function update(tab) {
+	ajouter();
   document.getElementById("id").value =
     tab.parentElement.parentElement.children[0].innerHTML;
   document.getElementById("name").value =
@@ -240,4 +242,27 @@ window.alert=function(message,timeout=null){
 	})
 }
 
+function ajouter()
+{
+	if(document.getElementById("openclose").innerHTML=="Ajouter")
+	{
+	document.getElementById("open").classList.remove("hidden");
+	document.getElementById("black").style="display:block"
+	document.getElementById("openclose").style="background-color: #f94144;";
+	document.getElementById("openclose").innerHTML="Fermer";
+	}
+	else
+	{
+		close();
+		document.getElementById("openclose").style="background-color: #90be6d;";
+		document.getElementById("openclose").innerHTML="Ajouter";
 
+	}
+}
+
+function close()
+{
+		document.getElementById("black").style="display:none"
+		document.getElementById("open").classList.add("hidden");
+
+}
