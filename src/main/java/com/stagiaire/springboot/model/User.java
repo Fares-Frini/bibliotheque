@@ -1,9 +1,10 @@
 	package com.stagiaire.springboot.model;
-
+	
 import java.security.NoSuchAlgorithmException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Set;
 
 import com.stagiaire.springboot.encrypt.Encryptor;
 
@@ -44,6 +45,8 @@ public class User {
 	@Column(name="role")
 	private String role;
 	
+	@Column(name="books")
+	private Set<Book> books;
 	public String getRole() {
 		return role;
 	}
