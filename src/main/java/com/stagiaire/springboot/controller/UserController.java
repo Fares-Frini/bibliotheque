@@ -1,4 +1,4 @@
-package com.stagiaire.springboot.controller;
+ package com.stagiaire.springboot.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.stagiaire.springboot.model.User;
 import com.stagiaire.springboot.service.UserService;
 
@@ -19,7 +18,7 @@ import com.stagiaire.springboot.service.UserService;
 @RequestMapping("/user")
 public class UserController {
 
-	
+		
 		private final UserService userService;
 		
 		public UserController(UserService userService)
@@ -47,6 +46,8 @@ public class UserController {
 		{
 			return userService.updateUser(user);
 		}
+		
+		
 		@DeleteMapping("/{id}")
 		public void deleteUser(@PathVariable("id") Long id)
 		{
