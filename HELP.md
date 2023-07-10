@@ -1,8 +1,3 @@
-# Read Me First
-The following was discovered as part of building this project:
-
-* The original package name 'com.stagiaire.spring-boot' is invalid and this project uses 'com.stagiaire.springboot' instead.
-
 # Getting Started
 
 ### Reference Documentation
